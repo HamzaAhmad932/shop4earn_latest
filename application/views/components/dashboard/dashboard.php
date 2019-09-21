@@ -1,25 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Porto - Bootstrap eCommerce Template</title>
-
-    <meta name="keywords" content="HTML5 Template" />
-    <meta name="description" content="Porto - Bootstrap eCommerce Template">
-    <meta name="author" content="SW-THEMES">
-        
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/images/icons/favicon.ico">
-
-    <!-- Plugins CSS File -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-    <!-- Main CSS File -->
-    <link rel="stylesheet" href="assets/css/style.min.css">
-</head>
 <body>
     <div class="page-wrapper">
         <header class="header">
@@ -37,11 +15,11 @@
                         </div><!-- End .header-dropown -->
 
                         <div class="header-dropdown">
-                            <a href="#"><img src="assets/images/flags/en.png" alt="England flag">ENGLISH</a>
+                            <a href="#"><img src="<?php echo base_url('v2/assets/images/flags/en.png')?>" alt="England flag">ENGLISH</a>
                             <div class="header-menu">
                                 <ul>
-                                    <li><a href="#"><img src="assets/images/flags/en.png" alt="England flag">ENGLISH</a></li>
-                                    <li><a href="#"><img src="assets/images/flags/fr.png" alt="France flag">FRENCH</a></li>
+                                    <li><a href="#"><img src="<?php echo base_url('v2/assets/images/flags/en.png')?>" alt="England flag">ENGLISH</a></li>
+                                    <li><a href="#"><img src="<?php echo base_url('v2/assets/images/flags/fr.png')?>" alt="France flag">FRENCH</a></li>
                                 </ul>
                             </div><!-- End .header-menu -->
                         </div><!-- End .header-dropown -->
@@ -97,7 +75,7 @@
                 <div class="container">
                     <div class="header-left">
                         <a href="index-2.html" class="logo">
-                            <img src="assets/images/logo.png" alt="Porto Logo">
+                            <img src="<?php echo base_url('v2/assets/images/logo.png')?>" alt="Porto Logo">
                         </a>
                     </div><!-- End .header-left -->
 
@@ -165,7 +143,7 @@
 
                                             <figure class="product-image-container">
                                                 <a href="product.html" class="product-image">
-                                                    <img src="assets/images/products/cart/product-1.jpg" alt="product">
+                                                    <img src="<?php echo base_url('v2/assets/images/products/cart/product-1.jpg')?>" alt="product">
                                                 </a>
                                                 <a href="#" class="btn-remove" title="Remove Product"><i class="icon-cancel"></i></a>
                                             </figure>
@@ -185,7 +163,7 @@
 
                                             <figure class="product-image-container">
                                                 <a href="product.html" class="product-image">
-                                                    <img src="assets/images/products/cart/product-2.jpg" alt="product">
+                                                    <img src="<?php echo base_url('v2/assets/images/products/cart/product-2.jpg')?>" alt="product">
                                                 </a>
                                                 <a href="#" class="btn-remove" title="Remove Product"><i class="icon-cancel"></i></a>
                                             </figure>
@@ -255,7 +233,7 @@
                                         <div class="col-lg-4">
                                             <div class="banner">
                                                 <a href="#">
-                                                    <img src="assets/images/menu-banner-2.jpg" alt="Menu banner">
+                                                    <img src="<?php echo base_url('v2/assets/images/menu-banner-2.jpg')?>" alt="Menu banner">
                                                 </a>
                                             </div><!-- End .banner -->
                                         </div><!-- End .col-lg-4 -->
@@ -308,7 +286,7 @@
                                         <div class="col-lg-4">
                                             <div class="banner">
                                                 <a href="#">
-                                                    <img class="product-promo" src="assets/images/menu-banner.jpg" alt="Menu banner">
+                                                    <img class="product-promo" src="<?php echo base_url('v2/assets/images/menu-banner.jpg')?>" alt="Menu banner">
                                                 </a>
                                             </div><!-- End .banner -->
                                         </div><!-- End .col-lg-4 -->
@@ -363,24 +341,24 @@
             <div class="home-slider-container">
                 <div class="home-slider owl-carousel owl-theme owl-theme-light">
                     <div class="home-slide">
-                        <div class="slide-bg owl-lazy"  data-src="assets/images/slider/slide-1.jpg"></div><!-- End .slide-bg -->
+                        <div class="slide-bg owl-lazy"  data-src="<?php echo base_url('v2/assets/images/slider/slide-1.jpg')?>"></div><!-- End .slide-bg -->
                         <div class="container">
                             <div class="home-slide-content">
                                 <div class="slide-border-top">
-                                    <img src="assets/images/slider/border-top.png" alt="Border" width="290" height="38">
+                                    <img src="<?php echo base_url('v2/assets/images/slider/border-top.png')?>" alt="Border" width="290" height="38">
                                 </div><!-- End .slide-border-top -->
                                 <h3>80% off for select items</h3>
                                 <h1>fashion mega sale</h1>
                                 <a href="category.html" class="btn btn-primary">Shop Now</a>
                                 <div class="slide-border-bottom">
-                                    <img src="assets/images/slider/border-bottom.png" alt="Border" width="290" height="111">
+                                    <img src="<?php echo base_url('v2/assets/images/slider/border-bottom.png')?>" alt="Border" width="290" height="111">
                                 </div><!-- End .slide-border-bottom -->
                             </div><!-- End .home-slide-content -->
                         </div><!-- End .container -->
                     </div><!-- End .home-slide -->
 
                     <div class="home-slide">
-                        <div class="slide-bg owl-lazy"  data-src="assets/images/slider/slide-2.jpg"></div><!-- End .slide-bg -->
+                        <div class="slide-bg owl-lazy"  data-src="<?php echo base_url('v2/assets/images/slider/slide-2.jpg')?>"></div><!-- End .slide-bg -->
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-6 offset-md-6">
@@ -433,7 +411,7 @@
                         <div class="col-md-4">
                             <div class="banner banner-image">
                                 <a href="#">
-                                    <img src="assets/images/banners/banner-1.jpg" alt="banner">
+                                    <img src="<?php echo base_url('v2/assets/images/banners/banner-1.jpg')?>" alt="banner">
                                 </a>
                             </div><!-- End .banner -->
                         </div><!-- End .col-md-4 -->
@@ -441,7 +419,7 @@
                         <div class="col-md-4">
                             <div class="banner banner-image">
                                 <a href="#">
-                                    <img src="assets/images/banners/banner-2.jpg" alt="banner">
+                                    <img src="<?php echo base_url('v2/assets/images/banners/banner-2.jpg')?>" alt="banner">
                                 </a>
                             </div><!-- End .banner -->
                         </div><!-- End .col-md-4 -->
@@ -449,7 +427,7 @@
                         <div class="col-md-4">
                             <div class="banner banner-image">
                                 <a href="#">
-                                    <img src="assets/images/banners/banner-3.jpg" alt="banner">
+                                    <img src="<?php echo base_url('v2/assets/images/banners/banner-3.jpg')?>" alt="banner">
                                 </a>
                             </div><!-- End .banner -->
                         </div><!-- End .col-md-4 -->
@@ -465,7 +443,7 @@
                         <div class="product">
                             <figure class="product-image-container">
                                 <a href="product.html" class="product-image">
-                                    <img src="assets/images/products/product-10-white.jpg" alt="product">
+                                    <img src="<?php echo base_url('v2/assets/images/products/product-10-white.jpg')?>" alt="product">
                                 </a>
                                 <a href="ajax/product-quick-view.html" class="btn-quickview">Quickview</a>
                             </figure>
@@ -501,7 +479,7 @@
                         <div class="product">
                             <figure class="product-image-container">
                                 <a href="product.html" class="product-image">
-                                    <img src="assets/images/products/product-3-white.jpg" alt="product">
+                                    <img src="<?php echo base_url('v2/assets/images/products/product-3-white.jpg')?>" alt="product">
                                 </a>
                                 <a href="ajax/product-quick-view.html" class="btn-quickview">Quickview</a>
                             </figure>
@@ -537,7 +515,7 @@
                         <div class="product">
                             <figure class="product-image-container">
                                 <a href="product.html" class="product-image">
-                                    <img src="assets/images/products/product-13-white.jpg" alt="product">
+                                    <img src="<?php echo base_url('v2/assets/images/products/product-13-white.jpg')?>" alt="product">
                                 </a>
                                 <a href="ajax/product-quick-view.html" class="btn-quickview">Quickview</a>
                             </figure>
@@ -573,7 +551,7 @@
                         <div class="product">
                             <figure class="product-image-container">
                                 <a href="product.html" class="product-image">
-                                    <img src="assets/images/products/product-2-white.jpg" alt="product">
+                                    <img src="<?php echo base_url('v2/assets/images/products/product-2-white.jpg')?>" alt="product">
                                 </a>
                                 <a href="ajax/product-quick-view.html" class="btn-quickview">Quickview</a>
                             </figure>
@@ -609,7 +587,7 @@
                         <div class="product">
                             <figure class="product-image-container">
                                 <a href="product.html" class="product-image">
-                                    <img src="assets/images/products/product-8-white.jpg" alt="product">
+                                    <img src="<?php echo base_url('v2/assets/images/products/product-8-white.jpg')?>" alt="product">
                                 </a>
                                 <a href="ajax/product-quick-view.html" class="btn-quickview">Quickview</a>
                             </figure>
@@ -645,7 +623,7 @@
                         <div class="product">
                             <figure class="product-image-container">
                                 <a href="product.html" class="product-image">
-                                    <img src="assets/images/products/product-1-white.jpg" alt="product">
+                                    <img src="<?php echo base_url('v2/assets/images/products/product-1-white.jpg')?>" alt="product">
                                 </a>
                                 <a href="ajax/product-quick-view.html" class="btn-quickview">Quickview</a>
                             </figure>
@@ -691,7 +669,7 @@
                         <div class="product">
                             <figure class="product-image-container">
                                 <a href="product.html" class="product-image">
-                                    <img src="assets/images/products/product-10.jpg" alt="product">
+                                    <img src="<?php echo base_url('v2/assets/images/products/product-10.jpg')?>" alt="product">
                                 </a>
                                 <a href="ajax/product-quick-view.html" class="btn-quickview">Quickview</a>
                             </figure>
@@ -727,7 +705,7 @@
                         <div class="product">
                             <figure class="product-image-container">
                                 <a href="product.html" class="product-image">
-                                    <img src="assets/images/products/product-6.jpg" alt="product">
+                                    <img src="<?php echo base_url('v2/assets/images/products/product-6.jpg')?>" alt="product">
                                 </a>
                                 <a href="ajax/product-quick-view.html" class="btn-quickview">Quickview</a>
                             </figure>
@@ -763,7 +741,7 @@
                         <div class="product">
                             <figure class="product-image-container">
                                 <a href="product.html" class="product-image">
-                                    <img src="assets/images/products/product-3.jpg" alt="product">
+                                    <img src="<?php echo base_url('v2/assets/images/products/product-3.jpg')?>" alt="product">
                                 </a>
                                 <a href="ajax/product-quick-view.html" class="btn-quickview">Quickview</a>
                             </figure>
@@ -799,7 +777,7 @@
                         <div class="product">
                             <figure class="product-image-container">
                                 <a href="product.html" class="product-image">
-                                    <img src="assets/images/products/product-13.jpg" alt="product">
+                                    <img src="<?php echo base_url('v2/assets/images/products/product-13.jpg')?>" alt="product">
                                 </a>
                                 <a href="ajax/product-quick-view.html" class="btn-quickview">Quickview</a>
                             </figure>
@@ -835,7 +813,7 @@
                         <div class="product">
                             <figure class="product-image-container">
                                 <a href="product.html" class="product-image">
-                                    <img src="assets/images/products/product-14.jpg" alt="product">
+                                    <img src="<?php echo base_url('v2/assets/images/products/product-14.jpg')?>" alt="product">
                                 </a>
                                 <a href="ajax/product-quick-view.html" class="btn-quickview">Quickview</a>
                             </figure>
@@ -871,7 +849,7 @@
                         <div class="product">
                             <figure class="product-image-container">
                                 <a href="product.html" class="product-image">
-                                    <img src="assets/images/products/product-2.jpg" alt="product">
+                                    <img src="<?php echo base_url('v2/assets/images/products/product-2.jpg')?>" alt="product">
                                 </a>
                                 <a href="ajax/product-quick-view.html" class="btn-quickview">Quickview</a>
                             </figure>
@@ -948,7 +926,7 @@
                 </div><!-- End .container -->
             </div><!-- End .info-section -->
 
-            <div class="promo-section" style="background-image: url(assets/images/promo-bg.jpg)">
+            <div class="promo-section" style="background-image: url(v2/assets/images/promo-bg.jpg)">
                 <div class="container">
                     <h3>fashion show collection</h3>
                     <a href="#" class="btn btn-dark">Shop Now</a>
@@ -959,25 +937,25 @@
                 <div class="container">
                     <div class="partners-carousel owl-carousel owl-theme">
                         <a href="#" class="partner">
-                            <img src="assets/images/logos/1.png" alt="logo">
+                            <img src="<?php echo base_url('v2/assets/images/logos/1.png')?>" alt="logo">
                         </a>
                         <a href="#" class="partner">
-                            <img src="assets/images/logos/2.png" alt="logo">
+                            <img src="<?php echo base_url('v2/assets/images/logos/2.png')?>" alt="logo">
                         </a>
                         <a href="#" class="partner">
-                            <img src="assets/images/logos/3.png" alt="logo">
+                            <img src="<?php echo base_url('v2/assets/images/logos/3.png')?>" alt="logo">
                         </a>
                         <a href="#" class="partner">
-                            <img src="assets/images/logos/4.png" alt="logo">
+                            <img src="<?php echo base_url('v2/assets/images/logos/4.png')?>" alt="logo">
                         </a>
                         <a href="#" class="partner">
-                            <img src="assets/images/logos/5.png" alt="logo">
+                            <img src="<?php echo base_url('v2/assets/images/logos/5.png')?>" alt="logo">
                         </a>
                         <a href="#" class="partner">
-                            <img src="assets/images/logos/2.png" alt="logo">
+                            <img src="<?php echo base_url('v2/assets/images/logos/2.png')?>" alt="logo">
                         </a>
                         <a href="#" class="partner">
-                            <img src="assets/images/logos/1.png" alt="logo">
+                            <img src="<?php echo base_url('v2/assets/images/logos/1.png')?>" alt="logo">
                         </a>
                     </div><!-- End .partners-carousel -->
                 </div><!-- End .container -->
@@ -991,7 +969,7 @@
                         <article class="entry">
                             <div class="entry-media">
                                 <a href="single.html">
-                                    <img src="assets/images/blog/home/post-1.png" alt="Post">
+                                    <img src="<?php echo base_url('v2/assets/images/blog/home/post-1.png')?>" alt="Post">
                                 </a>
                                 <div class="entry-date">29<span>Now</span></div><!-- End .entry-date -->
                             </div><!-- End .entry-media -->
@@ -1011,7 +989,7 @@
                         <article class="entry">
                             <div class="entry-media">
                                 <a href="single.html">
-                                    <img src="assets/images/blog/home/post-2.png" alt="Post">
+                                    <img src="<?php echo base_url('v2/assets/images/blog/home/post-2.png')?>" alt="Post">
                                 </a>
                                 <div class="entry-date">30 <span>Now</span></div><!-- End .entry-date -->
                             </div><!-- End .entry-media -->
@@ -1031,7 +1009,7 @@
                         <article class="entry">
                             <div class="entry-media">
                                 <a href="single.html">
-                                    <img src="assets/images/blog/home/post-3.png" alt="Post">
+                                    <img src="<?php echo base_url('v2/assets/images/blog/home/post-3.png')?>" alt="Post">
                                 </a>
                                 <div class="entry-date">28 <span>Now</span></div><!-- End .entry-date -->
                             </div><!-- End .entry-media -->
@@ -1163,7 +1141,7 @@
                                         Mon - Sun / 9:00AM - 8:00PM
                                     </li>
                                 </ul>
-                                <img src="assets/images/payments.png" alt="payment methods" class="footer-payments">
+                                <img src="<?php echo base_url('v2/assets/images/payments.png')?>" alt="payment methods" class="footer-payments">
                             </div><!-- End .footer-bottom -->
                         </div><!-- End .col-lg-9 -->
                     </div><!-- End .row -->
@@ -1271,9 +1249,9 @@
         </div><!-- End .mobile-menu-wrapper -->
     </div><!-- End .mobile-menu-container -->
 
-    <div class="newsletter-popup mfp-hide" id="newsletter-popup-form" style="background-image: url(assets/images/newsletter_popup_bg.jpg)">
+    <div class="newsletter-popup mfp-hide" id="newsletter-popup-form" style="background-image: url(v2/assets/images/newsletter_popup_bg.jpg)">
         <div class="newsletter-popup-content">
-            <img src="assets/images/logo-black.png" alt="Logo" class="logo-newsletter">
+            <img src="<?php echo base_url('v2/assets/images/logo-black.png')?>" alt="Logo" class="logo-newsletter">
             <h2>BE THE FIRST TO KNOW</h2>
             <p>Subscribe to the Porto eCommerce newsletter to receive timely updates from your favorite products.</p>
             <form action="#">
@@ -1296,12 +1274,11 @@
     <a id="scroll-top" href="#top" title="Top" role="button"><i class="icon-angle-up"></i></a>
 
     <!-- Plugins JS File -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/plugins.min.js"></script>
+    <script src="<?php echo base_url('v2/assets/js/jquery.min.js')?>"></script>
+    <script src="<?php echo base_url('v2/assets/js/bootstrap.bundle.min.js')?>"></script>
+    <script src="<?php echo base_url('v2/assets/js/plugins.min.js')?>"></script>
 
     <!-- Main JS File -->
-    <script src="assets/js/main.min.js"></script>
+    <script src="<?php echo base_url('v2/assets/js/main.min.js')?>"></script>
 </body>
-
 </html>

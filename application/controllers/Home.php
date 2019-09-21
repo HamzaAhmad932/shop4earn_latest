@@ -1,10 +1,20 @@
 <?php
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
     public function __Construct(){
+        
+
         parent::__Construct();
         $this->load->model('Home_model');
+    }
+
+    public function v2(){
+        $this->load->view('layout/header', $data['title'] = 'Home');
+        $this->load->view('components/dashboard/dashboard');
     }
 
         public function index(){
