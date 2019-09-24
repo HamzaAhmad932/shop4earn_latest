@@ -46,11 +46,10 @@
 								
 							<div class="btn_form">
                                                             
-     <form action="<?php echo site_url('Home/Add_cart'); ?>" method="post" name="productform" onsubmit="return validateForm()">
-                                                       <p class="qty"> Qty :  </p>
-                                                        <input min="1" type="number" id="quantity" name="qty" value="1" class="form-control input-small">
-                                          
-                                                    <!--<input type="text" class="item_quantity" name="qty" value="1" />-->
+<form action="<?php echo site_url('Home/Add_cart'); ?>" method="post" name="productform" onsubmit="return validateForm()">
+        <p class="qty"> Qty :  </p>
+        <input min="1" type="number" id="quantity" name="qty" value="1" class="form-control input-small">
+                                         
 <input type="hidden" name="product_code" value="<?php echo $r->product_code; ?>">
 <input type="hidden" name="product_name" value="<?php echo $r->product_name; ?>">
 <input type="hidden" name="product_price" value="<?php echo $r->product_price; ?>">

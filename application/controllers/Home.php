@@ -24,6 +24,22 @@ class Home extends CI_Controller {
         $this->load->view('v2/components/dashboard/dashboard', $data);
     }
 
+    public function Product_details1($id)
+    {
+        $data['title'] = 'Product detail';
+        $data['product']=$this->Home_model->get_product_detail($id);
+        $data['sliders'] = $this->Home_model->get_slider_data();
+        
+        $size_ids = isset($data['r']->size_id) ? explode(', ', $data['r']->size_id) : 0;
+        $color_ids = isset($data['r']->color_id) ? explode(', ', $data['r']->color_id) : 0;
+        $data['colors'] = $this->Home_model->get_colors($color_ids);
+        $data['sizes']= $this->Home_model->get_sizes($size_ids);
+
+        $this->load->view('v2/layout/head', $data);
+        $this->load->view('v2/layout/header');
+        $this->load->view('v2/components/product_detail/product_detail', $data);
+    }
+
         public function index(){
             
             $data['products']=$this->Home_model->get_products_data();
@@ -38,6 +54,7 @@ class Home extends CI_Controller {
             $this->load->view('Footer/footer');
              
         }
+
         public function Product_details($id){
 
             $data['products']=$this->Home_model->get_product_detail($id);
@@ -47,6 +64,7 @@ class Home extends CI_Controller {
             $this->load->view('Products/products_details',$data); 
             $this->load->view('Footer/footer');
         }
+    
         public function Add_cart(){
                 $data = array(
                 // 'product_name'=>$this->input->post('product_name') , 
