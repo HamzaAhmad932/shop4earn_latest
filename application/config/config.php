@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 // $config['base_url'] = '';
 $host = $_SERVER['HTTP_HOST'];
-if($host=='localhost:8080')
+if($host=='localhost:8080' or $host=='localhost')
 {
     $config['base_url'] = 'http://'.$_SERVER['HTTP_HOST'].'/shop4earn_latest/';
 
@@ -33,7 +33,7 @@ if($host=='localhost:8080')
 else
 {
     $config['base_url'] = 'http://'.$_SERVER['HTTP_HOST'].'/';
-} 
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -45,7 +45,7 @@ else
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
