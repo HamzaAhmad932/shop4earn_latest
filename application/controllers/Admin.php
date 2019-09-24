@@ -276,7 +276,7 @@ $data['boster_share_amount']=$this->Admin_model->boster_share_amount();
 		date_default_timezone_set("Asia/Karachi");
         $c_date=date("h:i:sa");
 
-		  $config['upload_path']='./images/';
+		  $config['upload_path']='./v2/assets/images/products/';
 		        $config['allowed_types']='gif|jpg|png';
 		        $config['max_size']='1800';
 		        $config['max_width']='4024';
@@ -371,7 +371,7 @@ $data['boster_share_amount']=$this->Admin_model->boster_share_amount();
 				date_default_timezone_set("Asia/Karachi");
                 $m_date=date("h:i:sa");
 
-                $config['upload_path']='./images/';
+                $config['upload_path']='./v2/assets/images/products/';
 		        $config['allowed_types']='gif|jpg|png';
 		        $config['max_size']='1800';
 		        $config['max_width']='4024';

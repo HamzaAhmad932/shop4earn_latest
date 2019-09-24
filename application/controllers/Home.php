@@ -10,16 +10,24 @@ class Home extends CI_Controller {
 
         parent::__Construct();
         $this->load->model('Home_model');
+        $this->load->helper('dump');
     }
 
-    public function v2(){
-        $this->load->view('layout/header', $data['title'] = 'Home');
-        $this->load->view('components/dashboard/dashboard');
+    public function dashboard(){
+
+        $data['title'] = 'Home';
+        $data['products']=$this->Home_model->get_products_data();
+        $data['sliders'] = $this->Home_model->get_slider_data();
+
+        $this->load->view('v2/layout/head', $data);
+        $this->load->view('v2/layout/header');
+        $this->load->view('v2/components/dashboard/dashboard', $data);
     }
 
         public function index(){
             
             $data['products']=$this->Home_model->get_products_data();
+            //dump($data);
             $this->load->view('Header/header');
             $this->load->view('Top_bar/top_bar');
             $this->load->view('Navbar/navbar');

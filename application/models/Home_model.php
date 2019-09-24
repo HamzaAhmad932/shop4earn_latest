@@ -11,6 +11,12 @@ class Home_model extends CI_Model{
 		$this->db->insert('card',$data);
 	 
 	}
+	public function get_slider_data()
+	{
+		$sql = "select * from slider";
+		$result = $this->db->query($sql)->result();
+		return $result;
+	}
 	public function login($username,$password){
 		$this->db->select('*');
 		$this->db->from('users');
@@ -202,10 +208,8 @@ return $return;
 	    return $user_id;	 
 	}
 	public function get_products_data(){
-		$this->db->select('*');
-		$this->db->from('products');
-		$this->db->where('status=1');
-		$query=$this->db->get();
+		$sql = "select * from products where status = 1 order by id desc";
+		$query = $this->db->query($sql);
 		if($query->num_rows()){
 			return $query->result();
 		}else{
