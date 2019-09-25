@@ -24,6 +24,22 @@ class Home extends CI_Controller {
         $this->load->view('v2/components/dashboard/dashboard', $data);
     }
 
+    public function Product_details1($id)
+    {
+        $data['title'] = 'Product detail';
+        $data['product']=$this->Home_model->get_product_detail($id);
+        $data['sliders'] = $this->Home_model->get_slider_data();
+        
+        $size_ids = isset($data['r']->size_id) ? explode(', ', $data['r']->size_id) : 0;
+        $color_ids = isset($data['r']->color_id) ? explode(', ', $data['r']->color_id) : 0;
+        $data['colors'] = $this->Home_model->get_colors($color_ids);
+        $data['sizes']= $this->Home_model->get_sizes($size_ids);
+
+        $this->load->view('v2/layout/head', $data);
+        $this->load->view('v2/layout/header');
+        $this->load->view('v2/components/product_detail/product_detail', $data);
+    }
+
         public function index(){
 
             $data['products']=$this->Home_model->get_products_data();
@@ -38,6 +54,7 @@ class Home extends CI_Controller {
             $this->load->view('Footer/footer');
 
         }
+
         public function Product_details($id){
 
             $data['products']=$this->Home_model->get_product_detail($id);
@@ -47,6 +64,7 @@ class Home extends CI_Controller {
             $this->load->view('Products/products_details',$data);
             $this->load->view('Footer/footer');
         }
+    
         public function Add_cart(){
                 $data = array(
                 // 'product_name'=>$this->input->post('product_name') ,
@@ -126,7 +144,7 @@ class Home extends CI_Controller {
         }
 	public function Register1(){
 		$data['title'] = "Register Page";
-		$data['parent_id']=$this->Home_model->get_user_id();
+		$data['user_id']=$this->Home_model->get_user_id();
 		$this->load->view('v2/layout/head', $data);
 		$this->load->view('v2/layout/header');
 		$this->load->view('v2/components/registration/register');
@@ -134,12 +152,10 @@ class Home extends CI_Controller {
 	}
 	public function registerFormValidation()
 	{
-		$this->form_validation->set_rules('sponsor_id', 'SponsorId', 'required');
 		$this->form_validation->set_rules('username', 'Username', 'required');
 		$this->form_validation->set_rules('email', 'Email', 'required');
 		$this->form_validation->set_rules('city', 'City', 'required');
 
-		$this->form_validation->set_rules('user_id', 'User Id', 'required');
 		$this->form_validation->set_rules('mobile', 'Email', 'required');
 		$this->form_validation->set_rules('province', 'City', 'required');
 
@@ -152,18 +168,18 @@ class Home extends CI_Controller {
 		}
 		$data = array(
 			'parent_id'			=> $this->input->post('sponsor_id'),
-			'user_id'			=> $this->input->post('user_id'),
+			'username'			=> $this->input->post('username'),
+			'user_id'			=> $this->Home_model->get_user_id() + 1,
 			'email'				=> $this->input->post('email') ,
 			'city'				=> $this->input->post('city') ,
 			'mobile'			=> $this->input->post('mobile') ,
-			'province'			=> $this->input->post('province') ,
+//			'province'			=> $this->input->post('province') ,
 			'password'			=> $this->input->post('password'),
 			'type'				=>'2'
 		);
-		if($this->Home_model->insertData($data)){
-			redirect('Order/Confirm_order',$data['user_id']);
-		}
+		$insert = $this->Home_model->insertData($data);
 
+		redirect('/index.php/Order/Confirm_order');
 	}
         public function register_validate(){
 			$this->form_validation->set_rules('password', 'Password', 'required');

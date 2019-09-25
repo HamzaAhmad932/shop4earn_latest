@@ -1,4 +1,6 @@
-
+<main>
+	<h1><?= $title ?></h1>
+</main>
 <footer class="footer">
 	<div class="container">
 		<div class="footer-top">

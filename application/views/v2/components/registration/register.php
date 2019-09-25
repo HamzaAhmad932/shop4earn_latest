@@ -53,7 +53,7 @@
 						<div class="col-md-6">
 							<div class="form-group required-field">
 								<label for="acc-lastname">User ID</label>
-								<input type="text" class="form-control" id="user_id" name="user_id" value="<?= $parent_id + 1 ?>" disabled required>
+								<input type="text" class="form-control" id="user_id" name="user_id" value="<?= $user_id + 1 ?>" disabled>
 							</div><!-- End .form-group -->
 						</div>
 

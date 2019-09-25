@@ -29,6 +29,28 @@ class Home_model extends CI_Model{
 			return false;
 		}
 	}
+	public function get_colors($ids){
+        $this->db->select(['id', 'name']);
+        $this->db->from('colors');
+        $this->db->where_in('id', $ids);
+        $query=$this->db->get();
+        if($query->num_rows()){
+            return $query->result_array();
+        }else{
+            return false;
+        }
+    }
+    public function get_sizes($ids){
+        $this->db->select(['id', 'name']);
+        $this->db->from('sizes');
+        $this->db->where_in('id', $ids);
+        $query=$this->db->get();
+        if($query->num_rows()){
+            return $query->result_array();
+        }else{
+            return false;
+        }
+    }
 	public function get_parent_id(){
 		$this->db->select_max('parent_id');
 		$this->db->from('users');
@@ -222,7 +244,7 @@ return $return;
 		$this->db->where('id',$id);
 		$query=$this->db->get();
 		if($query->num_rows()){
-			return $query->result();
+			return $query->row_array();
 		}else{
 			return false;
 		}
